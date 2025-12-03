@@ -6,14 +6,17 @@ body{
     width: 100%;
     height: 100dvh;
     display: grid;
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
 .content{
-        grid-column: 1/1;
-        grid-row: 1/1;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
         place-self: end;
+        padding: 0.75rem;
 
     #text{
         color: rgb(212, 212, 212);
@@ -31,8 +34,37 @@ body{
 
 #monki{
     aspect-ratio: 5/4;
-    max-width:100%;
-    grid-column: 2/2;
-    grid-row: 2/2;
+    width:100%;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    grid-row-start: 1;
+    grid-row-end: 5;
+    align-self: flex-end;
+    justify-self: flex-start;
+}
+
+@media screen and (max-width: 1200px){
+
+#monki{
+    aspect-ratio: 5/4;
+    width:100%;
+    grid-column-start: 2;
+    grid-column-end: 5;
+    grid-row-start: 2;
+    grid-row-end: 5;
     place-self: end;
+}
+}
+
+@media screen and (max-width: 700px) {
+    #monki{
+        aspect-ratio: 5/4;
+        width:100%;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 3;
+        grid-row-end: 5;
+        place-self: end;
+    }
+    
 }
