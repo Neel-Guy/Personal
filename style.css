@@ -1,0 +1,38 @@
+body{
+    background-color: rgb(18, 4, 37);
+}
+
+.container{
+    width: 100%;
+    height: 100dvh;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.content{
+        grid-column: 1/1;
+        grid-row: 1/1;
+        place-self: end;
+
+    #text{
+        color: rgb(212, 212, 212);
+        font-size: 2.2rem;
+        font-weight: 500;
+    }
+    
+    #subtext{
+        color: rgb(180, 180, 180);
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+}
+    
+
+#monki{
+    aspect-ratio: 5/4;
+    max-width:100%;
+    grid-column: 2/2;
+    grid-row: 2/2;
+    place-self: end;
+}
